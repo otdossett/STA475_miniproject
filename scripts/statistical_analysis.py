@@ -1,11 +1,9 @@
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
 from data_cleaning import generate_data
-import pandas as pd
-import numpy as np
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
-from statsmodels.stats.anova import AnovaRM
 from scipy import stats
+import pandas as pd
 
 
 def one_sample_ttest(data, column):
@@ -26,9 +24,9 @@ def eta_squared(aov):
 
 
 def main() -> None:
-    df = generate_data()
-    outcomes = ['HADS_diff', 'CDS_diff', 'PSQI_diff']
-    groups = df['group'].unique()
+    df: pd.DataFrame = generate_data()
+    outcomes: list[str] = ['HADS_diff', 'CDS_diff', 'PSQI_diff']
+    groups:pd.DataFrame = df['group'].unique()
 
     for outcome in outcomes:
         print(f"\nOne-sample t-tests for {outcome}:")

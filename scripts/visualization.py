@@ -29,7 +29,7 @@ def main() -> None:
     ax.set_title(
         'Comparison of Feature Differences Across Treatment Groups', fontweight='bold')
     ax.set_xticks([r + bar_width for r in range(len(grouped_data))])
-    ax.set_xticklabels(['Rosemary', 'Lavender', 'Both', 'Placebo'])
+    ax.set_xticklabels(['Placebo', 'Lavender', 'Rosemary', 'Both'])
 
     ax.legend()
 
