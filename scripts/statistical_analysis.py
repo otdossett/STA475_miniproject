@@ -26,7 +26,7 @@ def eta_squared(aov):
 def main() -> None:
     df: pd.DataFrame = generate_data()
     outcomes: list[str] = ['HADS_diff', 'CDS_diff', 'PSQI_diff']
-    groups:pd.DataFrame = df['group'].unique()
+    groups: pd.DataFrame = df['group'].unique()
 
     for outcome in outcomes:
         print(f"\nOne-sample t-tests for {outcome}:")
